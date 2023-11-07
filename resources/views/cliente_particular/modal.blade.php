@@ -4,12 +4,12 @@ ModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-<h5 class="modal-title" id="exampleModalLabel">Eliminar cliente empresarial</h5>
+<h5 class="modal-title" id="exampleModalLabel">Eliminar cliente particular</h5>
 <button type="button" class="btn-close" data-bs-dismiss="modal" arialabel="
 Close"></button>
 </div>
 <div class="modal-body">
-<p>Confirme si desea eliminar el cliente particular</p>
+<p>Confirme si desea eliminar el cliente particular "{{$clp->Nombres}} {{$clp->Apellidos}}"</p>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-bsdismiss="

@@ -9,7 +9,7 @@ ModalLabel" aria-hidden="true">
 Close"></button>
 </div>
 <div class="modal-body">
-<p>Confirme si desea eliminar la empresa</p>
+<p>Confirme si desea eliminar la empresa "{{$emp->Nombre}}"</p>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-bsdismiss="

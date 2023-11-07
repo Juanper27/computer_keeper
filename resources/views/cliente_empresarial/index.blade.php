@@ -1,12 +1,19 @@
 @extends('layouts.plantilla')
 @section('contenido')
-    <div class="card mb-4">
-        <div class="card-header">
-            <i class="fas fa-table me-1"></i>
-            DataTable Example
-        </div>
-        <div class="card-body">
-        <table id="datatablesSimple" class="display" style="width:100%">
+<div class="row">
+    <div class="col-md-9">
+        <a href="{{ url('cliente_empresarial/create') }}" class="pull-right">
+            <button class="btn btn-success">Crear cliente empresarial</button> </a>
+    </div>
+</div>
+<div class="mb-3"></div>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Tabla de clientes empresariales</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Codigo de cliente</th>
