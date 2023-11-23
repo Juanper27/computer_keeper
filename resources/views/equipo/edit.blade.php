@@ -22,7 +22,7 @@
         <input type="text" name="Cod_Cliente" id="Cod_Cliente" class="form-control" value="{{$equipo->Cod_Cliente}}">
     </div>
     <div class="col-md-4">
-        <label for="Nombre_Equipo" class="form-label">Nombre_Equipo</label>
+        <label for="Nombre_Equipo" class="form-label">Nombre Equipo</label>
         <input type="text" name="Nombre_Equipo" id="Nombre_Equipo" class="form-control" value="{{$equipo->Nombre_Equipo}}">
     </div>
     <div class="col-md-4">
@@ -30,7 +30,7 @@
         <input type="text" name="Marca" id="Marca" class="form-control" value="{{$equipo->Marca}}">
     </div>
     <div class="col-4">
-        <label for="Modelo" class="form-label">Modelo de</label>
+        <label for="Modelo" class="form-label">Modelo de Equipo</label>
         <input type="text" name="Modelo" id="Modelo" class="form-control" value="{{$equipo->Modelo}}">
     </div>
     <div class="col-6">
@@ -50,18 +50,24 @@
         <input type="text" name="Memoria_RAM" id="Memoria_RAM" class="form-control" value="{{$equipo->Memoria_RAM}}">
     </div>
     <div class="col-md-6">
-        <label for="Tipo_Sistema" class="form-label">Tipo_Sistema</label>
-        <input type="text" name="Tipo_Sistema" id="Tipo_Sistema" class="form-control" value="{{$equipo->Tipo_Sistema}}">
-    </div>
+        <label for="Tipo_Sistema" class="form-label">Tipo de Sistema</label>
+        <select name="Tipo_Sistema" id="Tipo_Sistema" class="form-control">
+            <option value="32 bits" {{ $equipo->Tipo_Sistema === '32 bits' ? 'selected' : '' }}>32 bits</option>
+            <option value="64 bits" {{ $equipo->Tipo_Sistema === '64 bits' ? 'selected' : '' }}>64 bits</option>
+        </select>
+    </div>    
     <div class="col-md-6">
-        <label for="Tipo_Equipo" class="form-label">Tipo Equipo</label>
-        <input type="text" name="Tipo_Equipo" id="Tipo_Equipo" class="form-control" value="{{$equipo->Tipo_Equipo}}">
-    </div>
+        <label for="Tipo_Equipo" class="form-label">Tipo de Equipo</label>
+        <select name="Tipo_Equipo" id="Tipo_Equipo" class="form-control">
+            <option value="Portátil" {{ $equipo->Tipo_Equipo === 'Portátil' ? 'selected' : '' }}>Portátil</option>
+            <option value="Escritorio" {{ $equipo->Tipo_Equipo === 'Escritorio' ? 'selected' : '' }}>Escritorio</option>
+        </select>
+    </div>    
     <div class="col-md-6">
         <label for="Observaciones" class="form-label">Observaciones</label>
         <input type="text" name="Observaciones" id="Observaciones" class="form-control" value="{{$equipo->Observaciones}}">
     </div>
-    <div class="col-12">
+    <div class="col-12 mt-3">
         <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
         <a class="btn btn-info" type="reset" href="{{url('equipo')}}"><span class="glyphicon glyphicon-home"></span> Regresar</a>
     </div>

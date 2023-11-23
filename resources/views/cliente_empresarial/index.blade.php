@@ -33,7 +33,7 @@
                     @foreach ($cliente_empresarial as $cle)
                         <tr>
                             <td>{{ $cle->Cod_Cliente_Emp }}</td>
-                            <td>{{ $cle->Cod_Empresa }}</td>
+                            <td>{{ $cle->empresa ? $cle->empresa->Cod_Empresa . ' ' . $cle->empresa->Nombre : 'Sin empresa asignada' }}</td>
                             <td>{{ $cle->Nombres }}</td>
                             <td>{{ $cle->Apellidos }}</td>
                             <td>{{ $cle->Cargo }}</td>

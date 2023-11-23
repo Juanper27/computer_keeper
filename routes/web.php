@@ -23,6 +23,11 @@ Route::resource('servicio', 'App\Http\Controllers\ServicioController');
 Route::resource('cliente_empresarial', 'App\Http\Controllers\ClienteEmpresarialController');
 Route::resource('cliente_particular', 'App\Http\Controllers\ClienteParticularController');
 Route::resource('tecnico', 'App\Http\Controllers\TecnicoController');
+
+Route::get('/reset-password', 'CustomPasswordResetController@showResetForm')->name('password.reset.custom');
+Route::post('/reset-password', 'CustomPasswordResetController@reset')->name('password.update.custom');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

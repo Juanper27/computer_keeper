@@ -17,10 +17,10 @@
 </div>
 {{ Form::open(array('action' => array('App\Http\Controllers\ServicioController@update', $servicio->Cod_Servicio), 'method' => 'patch')) }}
 <div class="row g-3">
-<div class="col-md-4">
+    <div class="col-md-4">
         <label for="Fecha" class="form-label">Fecha de servicio</label>
-        <input type="text" name="Fecha" id="Fecha" class="form-control" value="{{$servicio->Fecha}}">
-    </div>
+        <input type="date" name="Fecha" id="Fecha" class="form-control" value="{{$servicio->Fecha}}">
+    </div>    
     <div class="col-md-4">
         <label for="Cod_Equipo" class="form-label">Codigo de equipo</label>
         <input type="text" name="Cod_Equipo" id="Cod_Equipo" class="form-control" value="{{$servicio->Cod_Equipo}}">
@@ -31,12 +31,19 @@
     </div>
     <div class="col-4">
         <label for="Estado" class="form-label">Estado</label>
-        <input type="text" name="Estado" id="Estado" class="form-control" value="{{$servicio->Estado}}">
+        <select name="Estado" id="Estado" class="form-control">
+            <option value="En proceso" {{ $servicio->Estado === 'En proceso' ? 'selected' : '' }}>En proceso</option>
+            <option value="Abierto" {{ $servicio->Estado === 'Abierto' ? 'selected' : '' }}>Abierto</option>
+            <option value="Cerrado" {{ $servicio->Estado === 'Cerrado' ? 'selected' : '' }}>Cerrado</option>
+        </select>
     </div>
     <div class="col-6">
         <label for="Clasificacion" class="form-label">Clasificacion</label>
-        <input type="text" name="Clasificacion" id="Clasificacion" class="form-control" value="{{$servicio->Clasificacion}}">
-    </div>
+        <select name="Clasificacion" id="Clasificacion" class="form-control">
+            <option value="Incidente" {{ $servicio->Clasificacion === 'Incidente' ? 'selected' : '' }}>Incidente</option>
+            <option value="Requerimiento" {{ $servicio->Clasificacion === 'Requerimiento' ? 'selected' : '' }}>Requerimiento</option>
+        </select>
+    </div>    
     <div class="col-md-6">
         <label for="Detalle_Servicio" class="form-label">Detalle del servicio</label>
         <input type="text" name="Detalle_Servicio" id="Detalle_Servicio" class="form-control" value="{{$servicio->Detalle_Servicio}}">
@@ -45,10 +52,11 @@
         <label for="Observaciones" class="form-label">Observaciones</label>
         <input type="text" name="Observaciones" id="Observaciones" class="form-control" value="{{$servicio->Observaciones}}">
     </div>
-    <div class="col-12">
+    <div class="col-12 mt-3">
         <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
-        <a class="btn btn-info" type="reset" href="{{url('servicio')}}"><span class="glyphicon glyphicon-home"></span> Regresar</a>
+        <a class="btn btn-info ml-2" type="reset" href="{{url('servicio')}}"><span class="glyphicon glyphicon-home"></span> Regresar</a>
     </div>
+    
 </div>
 {{ Form::close() }}
 @endsection

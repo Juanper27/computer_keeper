@@ -15,7 +15,7 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        $empresa = empresa::orderBy('Cod_Empresa', 'DESC')->paginate(3);
+        $empresa = empresa::orderBy('Cod_Empresa', 'DESC')->paginate();
         return view('empresa.index', compact('empresa'));
     }
 

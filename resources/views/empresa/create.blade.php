@@ -45,9 +45,9 @@
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Fecha_Contrato">Fecha de contrato</label>
-            <input type="text" name="Fecha_Contrato" id="Fecha_Contrato" class="form-control" placeholder="Digite fecha de contrato">
+            <input type="date" name="Fecha_Contrato" id="Fecha_Contrato" class="form-control">
         </div>
-    </div>
+    </div>    
     <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
         <div class="form-group"> <br>
             <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok"></span> Guardar</button>

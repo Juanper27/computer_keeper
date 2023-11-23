@@ -35,9 +35,9 @@
     </div>
     <div class="col-md-6">
         <label for="Fecha_Contrato" class="form-label">Fecha de contrato</label>
-        <input type="text" name="Fecha_Contrato" id="Fecha_Contrato" class="form-control" value="{{$empresa->Fecha_Contrato}}">
-    </div>
-    <div class="col-12">
+        <input type="date" name="Fecha_Contrato" id="Fecha_Contrato" class="form-control" value="{{$empresa->Fecha_Contrato}}">
+    </div>    
+    <div class="col-12 mt-3">
         <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
         <a class="btn btn-info" type="reset" href="{{url('empresa')}}"><span class="glyphicon glyphicon-home"></span> Regresar</a>
     </div>

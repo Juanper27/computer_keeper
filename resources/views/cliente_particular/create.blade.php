@@ -51,9 +51,9 @@
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Fecha_Nac">Fecha de nacimiento</label>
-            <input type="text" name="Fecha_Nac" id="Fecha_Nac" class="form-control" placeholder="Digite fecha de nacimiento">
+            <input type="date" name="Fecha_Nac" id="Fecha_Nac" class="form-control">
         </div>
-    </div>
+    </div>    
        <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Correo">Correo</label>

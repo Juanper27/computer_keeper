@@ -69,15 +69,21 @@
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Tipo_Sistema">Tipo Sistema</label>
-            <input type="text" name="Tipo_Sistema" id="Tipo_Sistema" class="form-control" placeholder="Tipo de sistema">
+            <select name="Tipo_Sistema" id="Tipo_Sistema" class="form-control">
+                <option value="32 bits">32 bits</option>
+                <option value="64 bits">64 bits</option>
+            </select>
         </div>
-    </div>
+    </div>    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Tipo_Equipo">Tipo de equipo</label>
-            <input type="text" name="Tipo_Equipo" id="Tipo_Equipo" class="form-control" placeholder="Tipo de equipo">
+            <select name="Tipo_Equipo" id="Tipo_Equipo" class="form-control">
+                <option value="Portátil">Portátil</option>
+                <option value="Escritorio">Escritorio</option>
+            </select>
         </div>
-    </div>
+    </div>    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Observaciones">Observaciones</label>

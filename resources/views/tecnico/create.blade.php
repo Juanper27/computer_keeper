@@ -36,13 +36,12 @@
             <input type="text" name="Num_CC" id="Num_CC" class="form-control" placeholder="Digite numero de cc">
         </div>
     </div>
-    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Fecha_Ingreso">Fecha de ingreso</label>
-            <input type="text" name="Fecha_Ingreso" id="Fecha_Ingreso" class="form-control" placeholder="Digite fecha de ingreso">
+            <input type="date" name="Fecha_Ingreso" id="Fecha_Ingreso" class="form-control">
         </div>
-    </div>
+    </div>    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Direccion">Direccion</label>
@@ -58,9 +57,9 @@
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Fecha_Nac">Fecha de nacimiento</label>
-            <input type="text" name="Fecha_Nac" id="Fecha_Nac" class="form-control" placeholder="Digite fecha de nacimiento">
+            <input type="date" name="Fecha_Nac" id="Fecha_Nac" class="form-control">
         </div>
-    </div>
+    </div>    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="role_id">Rol</label>

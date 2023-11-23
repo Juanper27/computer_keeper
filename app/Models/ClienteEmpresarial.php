@@ -14,4 +14,10 @@ class ClienteEmpresarial extends Model
     public $timestamps = false;
     protected $fillable =
         ['Cod_Cliente_Emp','Cod_Empresa', 'Nombres', 'Apellidos', 'Cargo', 'Direccion', 'Telefono', 'Num_CC', 'Fecha_Nac', 'Correo'];
+
+        public function empresa()
+        {
+            return $this->belongsTo('App\Models\Empresa', 'Cod_Empresa');
+        }
 }
+

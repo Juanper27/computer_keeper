@@ -14,4 +14,9 @@ class Servicio extends Model
     protected $fillable =
         ['Fecha','Cod_Equipo', 'Cod_Tecnico', 'Estado', 'Clasificacion', 'Categoria', 'Detalle_Servicio', 'Observaciones']; 
     
+        public function tecnico()
+        {
+            return $this->belongsTo('App\Models\Tecnico', 'Cod_Tecnico');
+        }
+        
 }

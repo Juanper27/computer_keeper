@@ -4,29 +4,30 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Servicio;
+use App\Models\Tecnico;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
+
 class ServicioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $servicio = Servicio::orderBy('Cod_Servicio', 'DESC')->paginate(0);
+
         return view('servicio.index', compact('servicio'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function create()
     {
-        return view('servicio.create');
+        //Consulta de personas
+        $tecnicos = Tecnico::orderBy('Cod_Tecnico', 'DESC')
+            ->select('Cod_Tecnico', 'Nombres', 'Apellidos')
+            ->get();
+
+        return view('servicio.create',['tecnicos' => $tecnicos]);
     }
 
     public function store(Request $request)

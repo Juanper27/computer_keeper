@@ -14,4 +14,8 @@ class Empresa extends Model
     public $timestamps = false;
     protected $fillable =
         ['Nombre', 'Num_NIT', 'Direccion', 'Telefono', 'Fecha_Contrato'];
+
+        public function clienteempresarial(){
+            return $this->hasMany('App\Models\ClienteEmpresarial');
+            }
 }

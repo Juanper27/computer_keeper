@@ -39,13 +39,13 @@
     </div>
     <div class="col-md-4">
         <label for="Fecha_Nac" class="form-label">Fecha de nacimiento</label>
-        <input type="text" name="Fecha_Nac" id="Fecha_Nac" class="form-control" value="{{$cliente_particular->Fecha_Nac}}">
-    </div>
+        <input type="date" name="Fecha_Nac" id="Fecha_Nac" class="form-control" value="{{$cliente_particular->Fecha_Nac}}">
+    </div>    
     <div class="col-md-4">
         <label for="Correo" class="form-label">Correo</label>
         <input type="text" name="Correo" id="Correo" class="form-control" value="{{$cliente_particular->Correo}}">
     </div>
-    <div class="col-12">
+    <div class="col-12 mt-3">
         <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
         <a class="btn btn-info" type="reset" href="{{url('cliente_particular')}}"><span class="glyphicon glyphicon-home"></span> Regresar</a>
     </div>

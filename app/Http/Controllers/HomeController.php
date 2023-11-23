@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Servicio;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layouts\plantilla');
+        $countEnproceso = Servicio::where('Estado', 'En proceso')->count();
+        $countAbierto = Servicio::where('Estado', 'Abierto')->count();
+        $countCerrado = Servicio::where('Estado', 'Cerrado')->count();
+        $servicio = Servicio::whereIn('Estado', ['En proceso', 'Abierto'])
+        ->orderBy('Cod_Servicio', 'DESC')
+        ->paginate(0);    
+        $totalServicios = Servicio::count();
+    
+        return view('layouts.tarjeta',compact('servicio','countEnproceso', 'countAbierto', 'countCerrado', 'totalServicios'));
+        
     }
 }

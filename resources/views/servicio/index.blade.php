@@ -1,5 +1,6 @@
 @extends('layouts.plantilla')
 @section('contenido')
+
     <div class="row">
         <div class="col-md-9">
             <a href="{{ url('servicio/create') }}" class="pull-right">
@@ -34,7 +35,7 @@
                                 <td>{{ $ser->Cod_Servicio }}</td>
                                 <td>{{ $ser->Fecha }}</td>
                                 <td>{{ $ser->Cod_Equipo }}</td>
-                                <td>{{ $ser->Cod_Tecnico }}</td>
+                                <td>{{ $ser->tecnico ? $ser->tecnico->Nombres . ' ' . $ser->tecnico->Apellidos : 'Sin técnico asignado' }}</td>
                                 <td>{{ $ser->Estado }}</td>
                                 <td>{{ $ser->Clasificacion }}</td>
                                 <td>{{ $ser->Categoria }}</td>
@@ -56,6 +57,5 @@
                 </table>
             </div>
         </div>
-    @endsection
-    
+@endsection
 

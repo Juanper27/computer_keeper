@@ -14,4 +14,8 @@ class Tecnico extends Model
     public $timestamps = false;
     protected $fillable =
         ['Nombres', 'Apellidos', 'Num_CC', 'Fecha_Ingreso', 'Direccion', 'Telefono', 'Fecha_Nac'];
+
+        public function servicio(){
+            return $this->hasMany('App\Models\Servicio');
+            }
 }

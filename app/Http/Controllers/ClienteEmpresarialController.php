@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ClienteEmpresarial;
 use App\Models\Cliente;
+use App\Models\Empresa;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -28,7 +29,13 @@ class ClienteEmpresarialController extends Controller
      */
     public function create()
     {
-        return view('cliente_empresarial.create');
+                //Consulta de personas
+                $empresas = Empresa::orderBy('Cod_Empresa', 'DESC')
+                ->select('Cod_Empresa', 'Nombre')
+                ->get();
+    
+            return view('cliente_empresarial.create',['empresas' => $empresas]);
+
     }
 
     /**

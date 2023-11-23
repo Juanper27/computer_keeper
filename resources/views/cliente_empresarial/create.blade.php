@@ -20,10 +20,15 @@
 <div class="row">
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
-            <label for="Cod_Empresa">Codigo de empresa</label>
-            <input type="text" name="Cod_Empresa" id="Cod_Empresa" class="form-control" placeholder="Digite el codigo de la empresa">
+            <label for="Cod_Empresa">Seleccionar Empresa</label>
+            <select name="Cod_Empresa" id="Cod_Empresa" class="form-control">
+                <option value="">Seleccionar Empresa</option>
+                @foreach ($empresas as $empresa)
+                    <option value="{{ $empresa->Cod_Empresa }}">{{ $empresa->Cod_Empresa }} - {{ $empresa->Nombre }}</option>
+                @endforeach
+            </select>
         </div>
-    </div>
+    </div>    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Nombres">Nombres</label>
@@ -63,9 +68,9 @@
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Fecha_Nac">Fecha de nacimiento</label>
-            <input type="text" name="Fecha_Nac" id="Fecha_Nac" class="form-control" placeholder="Digite fecha de nacimiento">
+            <input type="date" name="Fecha_Nac" id="Fecha_Nac" class="form-control">
         </div>
-    </div>
+    </div>    
        <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Correo">Correo</label>

@@ -26,22 +26,34 @@
     </div>
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
-            <label for="Cod_Tecnico">Codigo del tecnico</label>
-            <input type="text" name="Cod_Tecnico" id="Cod_Tecnico" class="form-control" placeholder="Digite codigo del cliente">
+            <label for="Cod_Tecnico">Seleccionar Técnico</label>
+            <select name="Cod_Tecnico" id="Cod_Tecnico" class="form-control">
+                <option value="">Seleccionar Técnico</option>
+                @foreach ($tecnicos as $tecnico)
+                    <option value="{{ $tecnico->Cod_Tecnico }}">{{ $tecnico->Nombres }} {{ $tecnico->Apellidos }}</option>
+                @endforeach
+            </select>
         </div>
-    </div>
+    </div>    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Estado">Estado</label>
-            <input type="text" name="Estado" id="Estado" class="form-control" placeholder="Digite estado del servicio">
+            <select name="Estado" id="Estado" class="form-control">
+                <option value="En proceso">En proceso</option>
+                <option value="Abierto">Abierto</option>
+                <option value="Cerrado">Cerrado</option>
+            </select>
         </div>
     </div>
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Clasificacion">Clasificacion</label>
-            <input type="text" name="Clasificacion" id="Clasificacion" class="form-control" placeholder="Digite clasificacion del servicio">
+            <select name="Clasificacion" id="Clasificacion" class="form-control">
+                <option value="Incidente">Incidente</option>
+                <option value="Requerimiento">Requerimiento</option>
+            </select>
         </div>
-    </div>
+    </div>    
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="Categoria">Categoria</label>
